@@ -21,9 +21,9 @@ sudo ufw allow 2200/tcp
 sudo ufw allow www
 
 #### Allow NTP on port 123
-sudo ufw allow 123/udp
-sudo ufw allow out 123/udp
-sudo ufw allow out 53
+sudo ufw allow 123/udp<br />
+sudo ufw allow out 123/udp<br />
+sudo ufw allow out 53<br />
 
 #### change port number in /etc/ssh/sshd_config and run sudo /etc/init.d/ssh restart
 
