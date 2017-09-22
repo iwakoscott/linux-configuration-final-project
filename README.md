@@ -21,9 +21,9 @@ sudo ufw allow 2200/tcp
 sudo ufw allow www
 
 #### Allow NTP on port 123
-sudo ufw allow 123/udp\n
-sudo ufw allow out 123/udp\n
-sudo ufw allow out 53\n
+sudo ufw allow 123/udp
+sudo ufw allow out 123/udp
+sudo ufw allow out 53
 
 #### change port number in /etc/ssh/sshd_config and run sudo /etc/init.d/ssh restart
 
@@ -38,9 +38,9 @@ sudo apt-get install python finger python-pipsqlite3
 sudo pip install Flask requests oauth2client sqlalchemy
 
 #### add grader to users + add grader to sudoers + no remote passwords
-sudo adduser grader\n
-sudo nano /etc/sudoers.d/grader\n
-sudo nano /etc/ssh/sshd_config\n
+sudo adduser grader
+sudo nano /etc/sudoers.d/grader
+sudo nano /etc/ssh/sshd_config
 
 #### set to UTC timezone
 sudo dpkg-reconfigure tzdata
@@ -52,13 +52,13 @@ sudo apt-get install apache2
 sudo apt-get install libapache2-mod-wsgi
 
 ### What I learned in this project!
-Almost 90% of the time during this project I was getting a 500 Internal Error when I would try to access my website. What really helped me was using\n
-the "sudo tail -50 /var/log/apache2/error.log" to figure out what kind of errors were preventing me from deploying my website properly. Otherwise,\n
-I couldn't figure out whether or not it was a mod_wsgi configuration error or if it was the Python code that needed adjustment (it turns out it was the\n latter than the former.) Here are some changes I made to my Python code so that it would deploy without errors:\n
-\n
-1.) I had to make sure to use the complete path to my client_secrets.json file as well my database files.\n
-2.) I had to change the Authorized Javascript Origins to allow my URL in my Google Developers Console so that users could log into my site with their\n
-Google accounts.\n
+Almost 90% of the time during this project I was getting a 500 Internal Error when I would try to access my website. What really helped me was using
+the "sudo tail -50 /var/log/apache2/error.log" to figure out what kind of errors were preventing me from deploying my website properly. Otherwise,
+I couldn't figure out whether or not it was a mod_wsgi configuration error or if it was the Python code that needed adjustment (it turns out it was the latter than the former.) Here are some changes I made to my Python code so that it would deploy without errors:
+
+1.) I had to make sure to use the complete path to my client_secrets.json file as well my database files.
+2.) I had to change the Authorized Javascript Origins to allow my URL in my Google Developers Console so that users could log into my site with their
+Google accounts.
 
 ## Useful Links
 
