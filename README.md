@@ -32,11 +32,9 @@ sudo ufw enable
 #### change ports in configuration settings in lightsail
 
 #### Download Python 2
-sudo apt-get install python
-sudo apt-get install finger
-sudo apt-get install python-pip
-sudo apt-get install sqlite3
+sudo apt-get install python finger python-pipsqlite3
 
+#### Download requirments for my coffee app to work
 sudo pip install Flask requests oauth2client sqlalchemy
 
 #### add grader to users
@@ -52,7 +50,6 @@ sudo apt-get install apache2
 
 #### Installing mod_wsgi
 sudo apt-get install libapache2-mod-wsgi
-
 
 ## Useful Links
 
