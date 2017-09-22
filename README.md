@@ -44,7 +44,7 @@ sudo adduser grader
 sudo nano /etc/sudoers.d/grader # add to sudoers
 sudo nano /etc/ssh/sshd_config # edit so no passwords work you need a private key
 
-#### set to UTC timezone https://askubuntu.com/questions/138423/how-do-i-change-my-timezone-to-utc-gmt
+#### set to UTC timezone
 sudo dpkg-reconfigure tzdata
 
 #### Installing Apache2
@@ -74,3 +74,5 @@ https://askubuntu.com/questions/652095/cant-find-httpd-conf
 https://stackoverflow.com/questions/21124869/how-to-view-html-file-in-remote-unix-server
 https://stackoverflow.com/questions/7943751/what-is-the-python-3-equivalent-of-python-m-simplehttpserver
 https://stackoverflow.com/questions/7670289/sqlite3-operationalerror-unable-to-open-database-file
+### Setting timezone to UTC
+https://askubuntu.com/questions/138423/how-do-i-change-my-timezone-to-utc-gmt
