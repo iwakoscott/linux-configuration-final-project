@@ -21,9 +21,9 @@ sudo ufw allow 2200/tcp
 sudo ufw allow www
 
 #### Allow NTP on port 123
-sudo ufw allow 123/udp
-sudo ufw allow out 123/udp
-sudo ufw allow out 53
+sudo ufw allow 123/udp\n
+sudo ufw allow out 123/udp\n
+sudo ufw allow out 53\n
 
 #### change port number in /etc/ssh/sshd_config and run sudo /etc/init.d/ssh restart
 
@@ -37,10 +37,10 @@ sudo apt-get install python finger python-pipsqlite3
 #### Download requirments for my coffee app to work
 sudo pip install Flask requests oauth2client sqlalchemy
 
-#### add grader to users
-sudo adduser grader
-sudo nano /etc/sudoers.d/grader # add to sudoers
-sudo nano /etc/ssh/sshd_config # edit so no passwords work you need a private key
+#### add grader to users + add grader to sudoers + no remote passwords
+sudo adduser grader\n
+sudo nano /etc/sudoers.d/grader\n
+sudo nano /etc/ssh/sshd_config\n
 
 #### set to UTC timezone
 sudo dpkg-reconfigure tzdata
