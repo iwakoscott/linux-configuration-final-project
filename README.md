@@ -51,6 +51,15 @@ sudo apt-get install apache2
 #### Installing mod_wsgi
 sudo apt-get install libapache2-mod-wsgi
 
+### What I learned in this project!
+Almost 90% of the time during this project I was getting a 500 Internal Error when I would try to access my website. What really helped me was using\n
+the "sudo tail -50 /var/log/apache2/error.log" to figure out what kind of errors were preventing me from deploying my website properly. Otherwise,\n
+I couldn't figure out whether or not it was a mod_wsgi configuration error or if it was the Python code that needed adjustment (it turns out it was the\n latter than the former.) Here are some changes I made to my Python code so that it would deploy without errors:\n
+\n
+1.) I had to make sure to use the complete path to my client_secrets.json file as well my database files.\n
+2.) I had to change the Authorized Javascript Origins to allow my URL in my Google Developers Console so that users could log into my site with their\n
+Google accounts.\n
+
 ## Useful Links
 
 ### Most useful link to set up mod_wsgi correctly
@@ -67,9 +76,10 @@ https://askubuntu.com/questions/709843/how-to-configure-ufw-to-allow-ntp-to-work
 https://en.internetwache.org/dont-publicly-expose-git-or-how-we-downloaded-your-websites-sourcecode-an-analysis-of-alexas-1m-28-07-2015/
 https://askubuntu.com/questions/652095/cant-find-httpd-conf
 
+### Setting timezone to UTC
+https://askubuntu.com/questions/138423/how-do-i-change-my-timezone-to-utc-gmt
+
 ### Other useful links
 https://stackoverflow.com/questions/21124869/how-to-view-html-file-in-remote-unix-server
 https://stackoverflow.com/questions/7943751/what-is-the-python-3-equivalent-of-python-m-simplehttpserver
 https://stackoverflow.com/questions/7670289/sqlite3-operationalerror-unable-to-open-database-file
-### Setting timezone to UTC
-https://askubuntu.com/questions/138423/how-do-i-change-my-timezone-to-utc-gmt
